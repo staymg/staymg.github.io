@@ -1420,10 +1420,17 @@ except ApiException as e:
         "$ref" : "#/components/schemas/ErrorResponse"
       },
       "examples" : {
-        "mismatch_stock" : {
-          "summary" : "재고 불일치. 예약 불가",
+        "mismatch_status" : {
+          "summary" : "예약상태 불일치.",
           "value" : {
-            "code" : "A_4500",
+            "code" : "A_4510",
+            "message" : "{channelReservationCode} 예약 동기화 불가."
+          }
+        },
+        "mismatch_stock" : {
+          "summary" : "재고 불일치.",
+          "value" : {
+            "code" : "A_4520",
             "message" : "A숙소 A01객실 2024-12-12일 예약 불가."
           }
         }
